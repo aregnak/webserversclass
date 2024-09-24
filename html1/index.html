@@ -46,6 +46,13 @@
 				element.style.display = "none";
 			}
 		}
+
+async function getText(file) {
+            let myObject = await fetch(file);
+            let myText = await myObject.text();
+            document.getElementById("Hello").innerHTML = myText;
+		}
+
 	</script>
     </head>
     <body>
@@ -61,23 +68,26 @@
                 Very safe nothing to worry about</p>
         </div>
 
-	<button onclick="alert('BOO!'); return false;">Click to be scared</button><br><br>
+		<button onclick="alert('BOO!'); return false;">Click to be scared</button><br><br>
 
-	<p id="pToChange">Hello everyone, i hope my text doesnt change!</p>
-	<button onclick="changeText(); return false;">Click here to change text right above</button><br>
+		<p id="pToChange">Hello everyone, i hope my text doesnt change!</p>
+		<button onclick="changeText(); return false;">Click here to change text right above</button><br>
 	
-	<button onclick="visibility(); return false;">Click here to toggle visibility</button><br>
+		<button onclick="visibility(); return false;">Click here to toggle visibility</button><br>
 
-	<div id="thing">I am hidden</div><br><br>
-
-	<button onclick="imageChange(); return false;">Click to change the image below</button><br><br>	
-	<img id="image" src="gitcommit.jpg" width="40%"><br><br>
-
-	<button onclick="changeButtonText(this); return false;">Click me!!</button><br><br>
+		<div id="thing">I am hidden</div><br><br>
 	
-	<label for="requiredField">Required Field:</label>
-	<input type="text" id="requiredField" onblur="validateField()">
-	<span id="errorMessage">This field is required</span><br>
+		<button onclick="imageChange(); return false;">Click to change the image below</button><br><br>	
+		<img id="image" src="gitcommit.jpg" width="40%"><br><br>
+
+		<button onclick="changeButtonText(this); return false;">Click me!!</button><br><br>
+	
+		<label for="requiredField">Required Field:</label>
+		<input type="text" id="requiredField" onblur="validateField()">
+		<span id="errorMessage">This field is required</span><br>
+
+		<div id="Hello" style="margin-top: 20px;"></div>
+		<button onclick="getText('textFile.txt'); return false;">Fetch button</button><br>		
       </form>
 
         <a href="scammed.html">CLICK HERE TO DOWNLOAD FREE RAM</a>
