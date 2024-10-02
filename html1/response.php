@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <body>
-	<p>GET: <?= var_dump($_GET) ?></p>
-	<p>POST: <?= var_dump($_POST) ?></p>    
+	<div>
+		Hi your name is: <?= $_GET["firstname"] . " " .  $_GET["lastname"] . ?>.
+		<br>
+		your school is: <?= $_GET["school"] ?>.
+		<br>
+		your favourite spell is: <?= $_GET["spell"] ?>.
+	</div>
 </body>
 </html>
 
