@@ -56,22 +56,40 @@ async function getText(file) {
 	</script>
     </head>
     <body>
-      <form action="response.php" method="GET">
+      <form action="response.php" method="GET" accept-charset="UTF-8">
 		<label for="firstname"> First name </label>
 		<input type="text" name="firstname"><br>
 
 		<label for="lastname"> Last name </label>
 		<input type="text" name="lastname"><br>
 
-		<label for="school"> Your school </label>
+		<label for="school"> Amount of RAM </label>
 		<input type="text" name="school"><br>
 
-		<label for="spell"> Your favourite spell </label>
+		<label for="spell"> Preferred verification method </label>
 		<input type="text" name="spell"><br>
 
 		<input type="submit">
 
+		<br><br>
+	
 	  </form>
+
+	<form action="process_form.php" method="POST">
+    	<label for="name">Name:</label>
+   		<input type="text" id="name" name="name"><br/><br/>
+    	<label for="is_berry">is a berry?:</label>
+    	<input type="text" id="is_berry" name="is_berry"><br/><br/>
+    	<input type="submit" value="Submit">
+	</form>
+
+	<form action="display_form.php" method="GET">
+	    <label for="name_search">search by name:</label>
+    	<input type="text" id="name_search" name="name_search"><br/><br/>
+    	<input type="submit" value="Search">
+	</form>
+
+
 
 	  <form>
         <h1>DOWNLOAD RAM!</h1>

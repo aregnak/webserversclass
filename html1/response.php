@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <body>
 	<div>
-		Hi your name is: <?= $_GET["firstname"] . " " .  $_GET["lastname"] . ?>.
-		<br>
-		your school is: <?= $_GET["school"] ?>.
-		<br>
-		your favourite spell is: <?= $_GET["spell"] ?>.
+		Your name is: <?= $_GET["firstname"] . " " . $_GET["lastname"] ?>.
+      	<br>
+     	 The amount of ram you want is: <?= $_GET["school"] ?>.
+     	 <br>
+     	 Verification method: <?= $_GET["spell"] ?>.
+		 (still need your credit card).
 	</div>
 </body>
 </html>
